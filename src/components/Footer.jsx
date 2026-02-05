@@ -1,10 +1,26 @@
+import { useState } from "react";
+
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email.includes("@")) return;
+    setSubmitted(true);
+    setEmail("");
+  };
+
   return (
     <footer className="footer">
-      <div className="footer-top">
+      {/* Floating leaves */}
+      <span className="leaf leaf-1">🍃</span>
+      <span className="leaf leaf-2">🍃</span>
+      <span className="leaf leaf-3">🍃</span>
 
+      <div className="footer-top">
         {/* BRAND */}
-        <div className="footer-col">
+        <div className="footer-col brand">
           <h3 className="footer-logo">🌿 StayLeaforaa</h3>
           <p className="footer-text">
             Curated luxury stays surrounded by nature, comfort, and calm.
@@ -21,8 +37,9 @@ export default function Footer() {
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
+        
 
-        {/* LOCATIONS */}
+        {/* DESTINATIONS */}
         <div className="footer-col">
           <h4>Top Destinations</h4>
           <ul>
@@ -32,23 +49,39 @@ export default function Footer() {
             <li>Manali</li>
           </ul>
         </div>
+        
 
-        {/* CONTACT */}
+        {/* SUBSCRIBE */}
         <div className="footer-col">
-          <h4>Contact</h4>
-          <p>Email: support@stayleaforaa.com</p>
-          <p>Phone: +91 90000 00000</p>
+          <h4>Stay in Touch</h4>
+          <p className="footer-text small">
+            Get travel inspiration & exclusive offers.
+          </p>
+
+          <form className="subscribe-form" onSubmit={handleSubscribe}>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          {submitted && (
+            <p className="subscribe-success">✅ Subscribed successfully</p>
+          )}
 
           <div className="footer-socials">
-            <span>🌐</span>
-            <span>📷</span>
-            <span>📘</span>
+            <a href="#" aria-label="Website">🌐</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">📘</a>
           </div>
         </div>
-
       </div>
 
-      {/* BOTTOM BAR */}
+      {/* BOTTOM */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} StayLeaforaa. All rights reserved.
       </div>

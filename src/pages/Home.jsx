@@ -4,9 +4,13 @@ import { useNavigate } from "react-router-dom";
 import FeaturedStays from "../components/FeaturedStays";
 import Categories from "../components/Categories";
 import WhyChooseUs from "../components/WhyChooseUs";
+import WhyTravelersLove from "../components/WhyTravelersLove";
+import TravelTips from "../components/TravelTips";
+
 import Stats from "../components/Stats";
 
 export default function Home() {
+
   const searchRef = useRef();
   const navigate = useNavigate();
   const [maxPrice, setMaxPrice] = useState(20000);
@@ -85,14 +89,28 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
       {/* FEATURED */}
       <FeaturedStays />
+
+
 
       {/* EXPLORE */}
       <Categories />
 
       {/* WHY */}
       <WhyChooseUs />
+        
+  
+
+     <WhyTravelersLove />
+    
+    
+
+     <TravelTips />  
+         
 
       {/* STATS */}
       <Stats />

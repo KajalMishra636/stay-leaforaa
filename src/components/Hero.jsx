@@ -1,17 +1,30 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
-export default function Hero() {
-  const inputRef = useRef();
+<section className="hero-container">
+  <video
+    className="hero-video"
+    src="/assets/nature.mp4"
+    autoPlay
+    muted
+    loop
+  />
 
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  <div className="hero-overlay">
+    <h1 className="hero-title">
+      Find Your Calm. <span>Stay in Nature.</span>
+    </h1>
 
-  return (
-    <section className="hero">
-      <h1>Find Your Calm. Stay in Nature.</h1>
-      <p>Premium villas & peaceful retreats</p>
-      <input ref={inputRef} placeholder="Search destination..." />
-    </section>
-  );
-}
+    <p className="hero-subtitle">
+      Handpicked villas & peaceful retreats across India
+    </p>
+
+    <div className="hero-search">
+      <input
+        ref={searchRef}
+        type="text"
+        placeholder="Search location (Lonavala, Coorg...)"
+      />
+      <button onClick={handleSearch}>Search</button>
+    </div>
+  </div>
+</section>
