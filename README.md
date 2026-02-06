@@ -16,6 +16,12 @@
 ### Contact ai form
 ![Dashboard]<img width="949" height="497" alt="image" src="https://github.com/user-attachments/assets/b67a7833-2ec1-4d33-b8e9-07a8515d3704" />
 
+### Profile
+<img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/022e67a3-1714-44ee-b07b-1ba89733b2b6" />
+
+### Stay section
+![Uploading image.png…]()
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
