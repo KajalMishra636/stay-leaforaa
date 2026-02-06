@@ -23,6 +23,10 @@
 ![Stay]
 <img width="948" height="407" alt="Screenshot 2026-02-06 074854" src="https://github.com/user-attachments/assets/9041d262-5ad2-4b4f-8916-c65adc194722" />
 
+### Search Filter 
+![Search Filter] <img width="454" height="320" alt="image" src="https://github.com/user-attachments/assets/90b0cfbe-3316-443f-8385-c99bd5649ef8" />
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
