@@ -6,7 +6,7 @@
 
 ### Home Page
 ![Home Page]
-(<img width="945" height="495" alt="Screenshot 2026-02-06 074304" src="https://github.com/user-attachments/assets/cb22bb3d-e118-42ec-a15a-2e14f76b0ec2" />)
+<img width="945" height="495" alt="Screenshot 2026-02-06 074304" src="https://github.com/user-attachments/assets/cb22bb3d-e118-42ec-a15a-2e14f76b0ec2" />
 
 
 ### Login Page
