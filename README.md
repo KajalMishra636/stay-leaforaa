@@ -5,8 +5,9 @@
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](<img width="945" height="495" alt="image" src="https://github.com/user-attachments/assets/a949916a-6452-4794-9c7d-fa4d6d034f5d" />
-)
+![Home Page]
+(<img width="945" height="495" alt="Screenshot 2026-02-06 074304" src="https://github.com/user-attachments/assets/cb22bb3d-e118-42ec-a15a-2e14f76b0ec2" />)
+
 
 ### Login Page
 ![Login Page](<img width="946" height="491" alt="image" src="https://github.com/user-attachments/assets/ea870a81-d12a-4c41-a68b-c1d129d8ae7d" />
