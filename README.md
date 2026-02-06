@@ -1,5 +1,20 @@
 # Getting Started with Create React App
 
+
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](<img width="945" height="495" alt="image" src="https://github.com/user-attachments/assets/a949916a-6452-4794-9c7d-fa4d6d034f5d" />
+)
+
+### Login Page
+![Login Page](<img width="946" height="491" alt="image" src="https://github.com/user-attachments/assets/ea870a81-d12a-4c41-a68b-c1d129d8ae7d" />
+)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
