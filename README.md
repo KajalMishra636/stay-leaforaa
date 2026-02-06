@@ -20,7 +20,8 @@
 <img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/022e67a3-1714-44ee-b07b-1ba89733b2b6" />
 
 ### Stay section
-![Uploading image.png…]()
+![Stay]
+<img width="948" height="407" alt="Screenshot 2026-02-06 074854" src="https://github.com/user-attachments/assets/9041d262-5ad2-4b4f-8916-c65adc194722" />
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
