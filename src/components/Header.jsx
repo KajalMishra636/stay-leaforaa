@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useContext, useState, useRef, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import UserPanel from "./UserPanel";
+import logo from "../assets/logo.jpg";
 
 export default function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -24,14 +25,21 @@ export default function Header() {
   return (
     <>
       <header className="navbar">
-        <div className="logo">
-          🌿 <span>StayLeaforaa</span>
-        </div>
+        <NavLink to="/" className="logo">
+          <img src={logo} alt="StayLeaforaa logo" />
+          <span>StayLeaforaa</span>
+        </NavLink>
 
         <nav className="nav-links">
-          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/" end>
+            Home
+          </NavLink>
           <NavLink to="/stays">Stays</NavLink>
           <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/host" className="host-link">
+  Host your place
+</NavLink>
+
         </nav>
 
         <div className="nav-actions" ref={menuRef}>
@@ -41,12 +49,11 @@ export default function Header() {
           </button>
 
           <div
-  className={`user-avatar ${activeView ? "active" : ""}`}
-  onClick={() => setOpen((prev) => !prev)}
->
-  👤
-</div>
-
+            className={`user-avatar ${activeView ? "active" : ""}`}
+            onClick={() => setOpen((prev) => !prev)}
+          >
+            👤
+          </div>
 
           {/* Dropdown */}
           {open && (
@@ -87,10 +94,7 @@ export default function Header() {
 
       {/* SLIDE-IN USER PANEL */}
       {activeView && (
-        <UserPanel
-          view={activeView}
-          onClose={() => setActiveView(null)}
-        />
+        <UserPanel view={activeView} onClose={() => setActiveView(null)} />
       )}
     </>
   );
