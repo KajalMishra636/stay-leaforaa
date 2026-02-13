@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/stay-leaforaa/static/css/main.0efac54a.css",
+    "main.js": "/stay-leaforaa/static/js/main.34c81b3f.js",
+    "static/media/beach.jpg": "/stay-leaforaa/static/media/beach.462503afaec32c7f8fec.jpg",
+    "static/media/logo.jpg": "/stay-leaforaa/static/media/logo.b653ac335895807c0acc.jpg",
+    "index.html": "/stay-leaforaa/index.html",
+    "main.0efac54a.css.map": "/stay-leaforaa/static/css/main.0efac54a.css.map",
+    "main.34c81b3f.js.map": "/stay-leaforaa/static/js/main.34c81b3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0efac54a.css",
+    "static/js/main.34c81b3f.js"
+  ]
+}

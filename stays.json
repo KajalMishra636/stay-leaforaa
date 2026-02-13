@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Forest Breeze Villa",
+    "location": "Lonavala",
+    "price": 12000,
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+    "images": [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Leafy Haven Retreat",
+    "location": "Alibaug",
+    "price": 15000,
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Calm River Stay",
+    "location": "Coorg",
+    "price": 10000,
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+    ]
+  }
+]
