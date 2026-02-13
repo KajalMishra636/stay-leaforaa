@@ -6,7 +6,7 @@ import {
   FaFacebookF,
   FaEnvelope
 } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -112,9 +112,9 @@ export default function Footer() {
           )}
 
           <div className="footer-socials">
-            <a href="#" aria-label="Website"><FaGlobe /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.google.com/" aria-label="Website"><FaGlobe /></a>
+            <a href="https://www.instagram.com/?hl=en" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"><FaFacebookF /></a>
           </div>
         </div>
       </div>
