@@ -24,7 +24,25 @@ export const useFetchStays = () => {
           throw new Error("Invalid data format received");
         }
 
-        setStays(data);
+        // Normalise data so components can safely rely on
+        // `image` (single URL) and `images` (array of URLs)
+        const normalised = data.map((stay) => {
+          const rawImages = stay.images || stay.image;
+
+          const imagesArray = Array.isArray(rawImages)
+            ? rawImages
+            : rawImages
+            ? [rawImages]
+            : [];
+
+          return {
+            ...stay,
+            images: imagesArray,
+            image: imagesArray[0] || ""
+          };
+        });
+
+        setStays(normalised);
       } catch (err) {
         setError(err.message || "Something went wrong. Please try again.");
       } finally {

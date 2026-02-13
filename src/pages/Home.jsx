@@ -1,25 +1,31 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import FeaturedStays from "../components/FeaturedStays";
 import Categories from "../components/Categories";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Roadmap from "../components/Roadmap";
-
-
 import Stats from "../components/Stats";
+import Testimonials from "../components/Testimonials";
+import PaymentSection from "../components/PaymentSection";
 
 export default function Home() {
-
-  const searchRef = useRef();
   const navigate = useNavigate();
+  const [search, setSearch] = useState("");
   const [maxPrice, setMaxPrice] = useState(20000);
+  const [searchError, setSearchError] = useState("");
 
   const handleSearch = () => {
-    const value = searchRef.current.value.trim();
-    if (!value) return;
+    const value = search.trim();
+    if (!value) {
+      setSearchError("Please enter a location to search.");
+      return;
+    }
+    setSearchError("");
 
-    navigate(`/stays?location=${encodeURIComponent(value)}`);
+    navigate(
+      `/stays?location=${encodeURIComponent(value)}&maxPrice=${maxPrice}`
+    );
   };
 
   return (
@@ -45,12 +51,21 @@ export default function Home() {
 
           <div className="hero-search">
             <input
-              ref={searchRef}
               type="text"
               placeholder="Search location (Lonavala, Coorg...)"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                if (searchError) setSearchError("");
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleSearch();
+              }}
             />
             <button onClick={handleSearch}>Search</button>
           </div>
+
+          {searchError && <p className="hero-error">{searchError}</p>}
         </div>
       </section>
 
@@ -60,9 +75,13 @@ export default function Home() {
           <div className="search-item">
             <label>Search destination</label>
             <input
-              ref={searchRef}
               type="text"
               placeholder="Lonavala, Alibaug..."
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                if (searchError) setSearchError("");
+              }}
             />
           </div>
 
@@ -102,12 +121,12 @@ export default function Home() {
 
       {/* WHY */}
       <WhyChooseUs />
-        
-        <Roadmap />
-         
+      <Roadmap />
 
       {/* STATS */}
       <Stats />
+      <Testimonials />
+      <PaymentSection />
     </>
   );
 }

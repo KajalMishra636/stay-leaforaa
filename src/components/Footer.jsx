@@ -10,11 +10,32 @@ import {
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    if (!email.includes("@")) return;
+    const trimmed = email.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(trimmed)) {
+      setError("Please enter a valid email address.");
+      setSubmitted(false);
+      return;
+    }
+
+    setError("");
     setSubmitted(true);
+
+    // Trigger email via user's mail client so you receive
+    // a message from the subscriber's own inbox.
+    const ownerEmail = "hello@stayleaforaa.com"; // change to your address
+    const subject = encodeURIComponent("New StayLeaforaa newsletter subscriber");
+    const body = encodeURIComponent(
+      `A new guest subscribed to updates.\n\nEmail: ${trimmed}`
+    );
+
+    window.location.href = `mailto:${ownerEmail}?subject=${subject}&body=${body}`;
+
     setEmail("");
   };
 
@@ -72,12 +93,17 @@ export default function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (error) setError("");
+                }}
                 required
               />
             </div>
             <button type="submit">Subscribe</button>
           </form>
+
+          {error && <p className="form-error">{error}</p>}
 
           {submitted && (
             <p className="subscribe-success">

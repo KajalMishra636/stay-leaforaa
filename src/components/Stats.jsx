@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FaLeaf, FaHome, FaSmile } from "react-icons/fa";
 
 function StatItem({ icon, value, label, sub }) {
   const [count, setCount] = useState(0);
@@ -30,7 +31,7 @@ function StatItem({ icon, value, label, sub }) {
   }, [value]);
 
   return (
-    <div className="stat-card" ref={ref}>
+    <div className="stat-box" ref={ref}>
       <div className="stat-icon">{icon}</div>
       <h3>{count.toLocaleString()}+</h3>
       <h4>{label}</h4>
@@ -39,11 +40,51 @@ function StatItem({ icon, value, label, sub }) {
   );
 }
 
+const STATS = [
+  {
+    icon: <FaLeaf />,
+    value: 2500,
+    label: "Nature-first stays",
+    sub: "Handpicked retreats surrounded by greenery and calm."
+  },
+  {
+    icon: <FaHome />,
+    value: 180,
+    label: "Unique properties",
+    sub: "Villas, homestays and farmhouses across India."
+  },
+  {
+    icon: <FaSmile />,
+    value: 3200,
+    label: "Happy guests",
+    sub: "Travelers who found their calm with StayLeaforaa."
+  }
+];
+
 export default function Stats() {
   return (
     <section className="stats-section">
-      
-      
+      <div className="stats-wrapper">
+        <div className="stats-heading">
+          <h2>Trusted by nature‑loving travelers</h2>
+          <p>
+            Real numbers from our community of guests and hosts choosing
+            peaceful, nature‑centric stays.
+          </p>
+        </div>
+
+        <div className="stats-container">
+          {STATS.map((item) => (
+            <StatItem
+              key={item.label}
+              icon={item.icon}
+              value={item.value}
+              label={item.label}
+              sub={item.sub}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

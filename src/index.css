@@ -1062,7 +1062,7 @@ body.dark .search-item input {
   padding: 0 10px 10px;
 }
 
-card:hover {
+.card:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12 );
 }
@@ -3154,4 +3154,124 @@ body.dark .chat-quick button {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+/* ============================
+   VISUAL REFRESH & THEME UPGRADE
+============================ */
+
+body {
+  background: radial-gradient(circle at top left, #f9fafb, #f3f6ef);
+}
+
+body.dark {
+  background: radial-gradient(circle at top left, #020617, #0b1120);
+  color: #e5e7eb;
+}
+
+body.dark .navbar {
+  background: rgba(15, 23, 42, 0.96);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.9),
+    rgba(15, 23, 42, 0.45)
+  );
+}
+
+body.dark .hero-overlay {
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.96),
+    rgba(6, 95, 70, 0.75)
+  );
+}
+
+.theme-toggle {
+  background: linear-gradient(135deg, #e5e7eb, #ffffff);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+body.dark .theme-toggle {
+  background: linear-gradient(135deg, #020617, #0b1120);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero search micro‑interactions */
+.hero-search input:focus {
+  box-shadow: 0 0 0 2px rgba(248, 250, 252, 0.6);
+}
+
+.hero-search button {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.hero-search button:hover {
+  background: linear-gradient(135deg, #16a34a, #166534);
+}
+
+.hero-error {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #fee2e2;
+}
+
+/* Filter bar upgrade */
+.filter-bar {
+  backdrop-filter: blur(12px);
+}
+
+.price-input {
+  max-width: 140px;
+}
+
+/* Dark mode for filter bar frame */
+body.dark .filter-bar {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* Quick segment chips */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 40px 10px;
+}
+
+.filter-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #d1e3d4;
+  background: #f9fbf8;
+  font-size: 13px;
+  cursor: pointer;
+  color: #2f4f3a;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  background: #ecf6ee;
+  transform: translateY(-1px);
+}
+
+.filter-chip.active {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(22,163,74,0.35);
+}
+
+body.dark .filter-chip {
+  border-color: #334155;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+body.dark .filter-chip.active {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #022c22;
 }
